@@ -9,7 +9,7 @@
 				.find(' > span')
 				.attr('title', 'Collapse this branch')
 				.on('click', function(e) {
-					var children = $(this).parent('li.parent_li').find(' > ul > li');
+					var children = $(this).parent('li.parent_li').find(' > ul');
 					if (children.is(':visible')) {
 						children.hide('fast');
 						$(this).attr('title', 'Expand this branch').find(' > i').addClass('fa-plus-circle').removeClass('fa-minus-circle');
