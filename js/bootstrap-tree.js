@@ -2,6 +2,7 @@
 	var bootstrapTree = {
 		init: function() {
 			$(this).find('ul').attr('role', 'tree').find('ul').attr('role', 'group');
+			$(this).find('li:has(ul)').find(' > ul:not([expanded])').hide();
 			$(this)
 				.find('li:has(ul)')
 				.addClass('parent_li')
